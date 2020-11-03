@@ -12,19 +12,16 @@
 
 import UIKit
 
-protocol StatusPresentationLogic
-{
+protocol StatusPresentationLogic {
     func presentSomething(response: Status.Something.Response)
 }
 
-class StatusPresenter: StatusPresentationLogic
-{
+class StatusPresenter: StatusPresentationLogic {
     weak var viewController: StatusDisplayLogic?
-    
+
     // MARK: Do something
-    
-    func presentSomething(response: Status.Something.Response)
-    {
+
+    func presentSomething(response: Status.Something.Response) {
         let viewModel = Status.Something.ViewModel()
         viewController?.displaySomething(viewModel: viewModel)
     }

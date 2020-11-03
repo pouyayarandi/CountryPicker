@@ -12,23 +12,20 @@
 
 import UIKit
 
-@objc protocol StatusRoutingLogic
-{
+@objc protocol StatusRoutingLogic {
     //func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
-protocol StatusDataPassing
-{
+protocol StatusDataPassing {
     var dataStore: StatusDataStore? { get }
 }
 
-class StatusRouter: NSObject, StatusRoutingLogic, StatusDataPassing
-{
+class StatusRouter: NSObject, StatusRoutingLogic, StatusDataPassing {
     weak var viewController: StatusViewController?
     var dataStore: StatusDataStore?
-    
+
     // MARK: Routing
-    
+
     //func routeToSomewhere(segue: UIStoryboardSegue?)
     //{
     //  if let segue = segue {
@@ -43,16 +40,16 @@ class StatusRouter: NSObject, StatusRoutingLogic, StatusDataPassing
     //    navigateToSomewhere(source: viewController!, destination: destinationVC)
     //  }
     //}
-    
+
     // MARK: Navigation
-    
+
     //func navigateToSomewhere(source: StatusViewController, destination: SomewhereViewController)
     //{
     //  source.show(destination, sender: nil)
     //}
-    
+
     // MARK: Passing data
-    
+
     //func passDataToSomewhere(source: StatusDataStore, destination: inout SomewhereDataStore)
     //{
     //  destination.name = source.name

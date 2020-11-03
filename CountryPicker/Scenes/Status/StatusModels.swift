@@ -12,20 +12,16 @@
 
 import UIKit
 
-enum Status
-{
+enum Status {
     // MARK: Use cases
+    // swiftlint:disable nesting
     
-    enum Something
-    {
-        struct Request
-        {
+    enum Something {
+        struct Request {
         }
-        struct Response
-        {
+        struct Response {
         }
-        struct ViewModel
-        {
+        struct ViewModel {
         }
     }
 }
