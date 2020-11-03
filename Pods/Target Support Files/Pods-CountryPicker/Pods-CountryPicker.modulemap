@@ -1,0 +1,6 @@
+framework module Pods_CountryPicker {
+  umbrella header "Pods-CountryPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
