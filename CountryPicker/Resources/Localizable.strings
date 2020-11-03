@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  CountryPicker
+
+  Created by Pouya Yarandi on 11/3/20.
+  Copyright © 2020 RoundTable. All rights reserved.
+*/
+
+/**** Status ****/
+
+"Status scene title" = "Countries";
+"Selected country list description" = "Your selected countries are here";
+"Select country button title" = "Choose";
