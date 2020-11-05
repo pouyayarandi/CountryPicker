@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Kyg-be-TAv">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,19 +13,94 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="StatusViewController" customModule="CountryPicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="StatusView" customModule="CountryPicker" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Bu-lk-kVN" customClass="ActionBarView" customModule="CountryPicker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Yo7-Rs-i3Y"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adN-NG-gi9">
+                                <rect key="frame" x="20" y="118" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gte-zS-Mpc">
+                                <rect key="frame" x="20" y="179" width="374" height="311.5"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTL-7t-qxc">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="311.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="oTL-7t-qxc" secondAttribute="trailing" id="BVT-8T-xct"/>
+                                    <constraint firstItem="oTL-7t-qxc" firstAttribute="top" secondItem="gte-zS-Mpc" secondAttribute="top" id="bsh-Fa-G4c"/>
+                                    <constraint firstAttribute="width" secondItem="gte-zS-Mpc" secondAttribute="height" multiplier="1.2" id="lDu-VW-vFK"/>
+                                    <constraint firstItem="oTL-7t-qxc" firstAttribute="leading" secondItem="gte-zS-Mpc" secondAttribute="leading" id="lfj-Jx-Oex"/>
+                                    <constraint firstAttribute="bottom" secondItem="oTL-7t-qxc" secondAttribute="bottom" id="uLv-5P-ibx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="adN-NG-gi9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1G7-PS-3mH"/>
+                            <constraint firstItem="2Bu-lk-kVN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9hb-Ud-xCh"/>
+                            <constraint firstItem="adN-NG-gi9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="AfM-iu-0R0"/>
+                            <constraint firstItem="gte-zS-Mpc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="CA7-C2-3YY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Bu-lk-kVN" secondAttribute="trailing" id="Xte-wP-Upp"/>
+                            <constraint firstItem="2Bu-lk-kVN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bxQ-Cy-Z5E"/>
+                            <constraint firstItem="gte-zS-Mpc" firstAttribute="top" secondItem="adN-NG-gi9" secondAttribute="bottom" constant="40" id="dNa-ee-6LZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="adN-NG-gi9" secondAttribute="trailing" constant="20" id="fmn-h6-vnk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gte-zS-Mpc" secondAttribute="trailing" constant="20" id="ytW-vE-fF1"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="actionBar" destination="2Bu-lk-kVN" id="Adc-0f-gdP"/>
+                            <outlet property="countriesTextView" destination="oTL-7t-qxc" id="uiz-3e-mYy"/>
+                            <outlet property="countriesTextViewContainer" destination="gte-zS-Mpc" id="gEJ-3i-klx"/>
+                            <outlet property="descriptionLabel" destination="adN-NG-gi9" id="mAE-Fv-tTK"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="T9B-MJ-Dc5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="94"/>
+            <point key="canvasLocation" x="713.04347826086962" y="93.75"/>
+        </scene>
+        <!--Transparent Navigation Controller-->
+        <scene sceneID="oHJ-sy-iop">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Kyg-be-TAv" customClass="TransparentNavigationController" customModule="CountryPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Nh-uW-YHt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Oyf-1d-axZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5e-9e-zFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197.10144927536234" y="93.75"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

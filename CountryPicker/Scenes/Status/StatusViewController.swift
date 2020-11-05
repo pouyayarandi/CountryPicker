@@ -19,6 +19,11 @@ protocol StatusDisplayLogic: class {
 class StatusViewController: UIViewController, StatusDisplayLogic {
     var interactor: StatusBusinessLogic?
     var router: (NSObjectProtocol & StatusRoutingLogic & StatusDataPassing)?
+    
+    // swiftlint:disable force_cast
+    var statusView: StatusView {
+        view as! StatusView
+    }
 
     // MARK: Object lifecycle
 
@@ -62,12 +67,17 @@ class StatusViewController: UIViewController, StatusDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        setupView()
     }
 
     // MARK: Do something
-
-    //@IBOutlet weak var nameTextField: UITextField!
+    
+    @Localizable(key: "Status scene title")
+    private var sceneTitle
+    
+    private func setupView() {
+        title = sceneTitle
+    }
 
     func doSomething() {
         let request = Status.Something.Request()

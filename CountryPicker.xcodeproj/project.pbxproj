@@ -10,6 +10,11 @@
 		033EFA6AA6E98847B0179431 /* Pods_CountryPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498817D657CE77BF6B46A3D /* Pods_CountryPicker.framework */; };
 		0B92D2314DC37C400223F8AB /* Pods_CountryPicker_CountryPickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D641E2B85A4A07375603446 /* Pods_CountryPicker_CountryPickerUITests.framework */; };
 		14291F444BA54D402A94448B /* Pods_CountryPickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1AA340191A4777807A17FC /* Pods_CountryPickerTests.framework */; };
+		83220AFA25535FB800CE5CB6 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83220AF925535FB800CE5CB6 /* TransparentNavigationController.swift */; };
+		83220AFF2553632E00CE5CB6 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83220AFE2553632E00CE5CB6 /* StatusView.swift */; };
+		83220B0A255364A100CE5CB6 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83220B09255364A100CE5CB6 /* Localizable.swift */; };
+		837C3A5625533DC500A268E4 /* ActionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C3A5525533DC500A268E4 /* ActionBarView.swift */; };
+		837C3A5B2553413100A268E4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C3A5A2553413100A268E4 /* Color.swift */; };
 		83BB8B602551E3890006C4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB8B5F2551E3890006C4F1 /* AppDelegate.swift */; };
 		83BB8B672551E3890006C4F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83BB8B652551E3890006C4F1 /* Main.storyboard */; };
 		83BB8B692551E38A0006C4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83BB8B682551E38A0006C4F1 /* Assets.xcassets */; };
@@ -49,6 +54,11 @@
 		3D641E2B85A4A07375603446 /* Pods_CountryPicker_CountryPickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountryPicker_CountryPickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7753DCBC2196BC006CEE1607 /* Pods-CountryPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryPicker.release.xcconfig"; path = "Target Support Files/Pods-CountryPicker/Pods-CountryPicker.release.xcconfig"; sourceTree = "<group>"; };
 		77A52116A7632572887A5636 /* Pods-CountryPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryPicker.debug.xcconfig"; path = "Target Support Files/Pods-CountryPicker/Pods-CountryPicker.debug.xcconfig"; sourceTree = "<group>"; };
+		83220AF925535FB800CE5CB6 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
+		83220AFE2553632E00CE5CB6 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		83220B09255364A100CE5CB6 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		837C3A5525533DC500A268E4 /* ActionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBarView.swift; sourceTree = "<group>"; };
+		837C3A5A2553413100A268E4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		83BB8B5C2551E3890006C4F1 /* CountryPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BB8B5F2551E3890006C4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83BB8B662551E3890006C4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +124,56 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		83220B032553645900CE5CB6 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				83220B09255364A100CE5CB6 /* Localizable.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		83220B042553646600CE5CB6 /* TransparentNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				83220AF925535FB800CE5CB6 /* TransparentNavigationController.swift */,
+			);
+			path = TransparentNavigation;
+			sourceTree = "<group>";
+		};
+		83220B052553647500CE5CB6 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				837C3A5A2553413100A268E4 /* Color.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		837C3A5325533D9B00A268E4 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				837C3A5425533DA600A268E4 /* ActionBar */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		837C3A5425533DA600A268E4 /* ActionBar */ = {
+			isa = PBXGroup;
+			children = (
+				837C3A5525533DC500A268E4 /* ActionBarView.swift */,
+			);
+			path = ActionBar;
+			sourceTree = "<group>";
+		};
+		837C3A5F2553413600A268E4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				83220B032553645900CE5CB6 /* Wrappers */,
+				83220B052553647500CE5CB6 /* Colors */,
+				83220B042553646600CE5CB6 /* TransparentNavigation */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		83BB8B532551E3890006C4F1 = {
 			isa = PBXGroup;
 			children = (
@@ -139,9 +199,11 @@
 		83BB8B5E2551E3890006C4F1 /* CountryPicker */ = {
 			isa = PBXGroup;
 			children = (
+				837C3A5325533D9B00A268E4 /* UIKit */,
 				83BB8B972551E5220006C4F1 /* Scenes */,
 				83BB8B932551E4290006C4F1 /* Resources */,
 				83BB8B922551E3D50006C4F1 /* Shared */,
+				837C3A5F2553413600A268E4 /* Utilities */,
 			);
 			path = CountryPicker;
 			sourceTree = "<group>";
@@ -201,6 +263,7 @@
 				83BB8BB42551E7770006C4F1 /* StatusModels.swift */,
 				83BB8BB52551E7770006C4F1 /* StatusViewController.swift */,
 				83BB8BB62551E7770006C4F1 /* StatusInteractor.swift */,
+				83220AFE2553632E00CE5CB6 /* StatusView.swift */,
 			);
 			path = Status;
 			sourceTree = "<group>";
@@ -458,11 +521,16 @@
 			files = (
 				83BB8BBC2551E7770006C4F1 /* StatusInteractor.swift in Sources */,
 				83BB8BBB2551E7770006C4F1 /* StatusViewController.swift in Sources */,
+				83220AFF2553632E00CE5CB6 /* StatusView.swift in Sources */,
 				83BB8B602551E3890006C4F1 /* AppDelegate.swift in Sources */,
 				83BB8BBA2551E7770006C4F1 /* StatusModels.swift in Sources */,
+				837C3A5625533DC500A268E4 /* ActionBarView.swift in Sources */,
 				83BB8BB72551E7770006C4F1 /* StatusPresenter.swift in Sources */,
 				83BB8BB82551E7770006C4F1 /* StatusWorker.swift in Sources */,
 				83BB8BB92551E7770006C4F1 /* StatusRouter.swift in Sources */,
+				83220AFA25535FB800CE5CB6 /* TransparentNavigationController.swift in Sources */,
+				83220B0A255364A100CE5CB6 /* Localizable.swift in Sources */,
+				837C3A5B2553413100A268E4 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,7 +636,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -623,7 +691,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
