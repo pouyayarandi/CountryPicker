@@ -15,6 +15,12 @@
 		83220B0A255364A100CE5CB6 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83220B09255364A100CE5CB6 /* Localizable.swift */; };
 		837C3A5625533DC500A268E4 /* ActionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C3A5525533DC500A268E4 /* ActionBarView.swift */; };
 		837C3A5B2553413100A268E4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C3A5A2553413100A268E4 /* Color.swift */; };
+		8397190E255444D2002FC36C /* PickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83971908255444D2002FC36C /* PickerPresenter.swift */; };
+		8397190F255444D2002FC36C /* PickerWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83971909255444D2002FC36C /* PickerWorker.swift */; };
+		83971910255444D2002FC36C /* PickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190A255444D2002FC36C /* PickerRouter.swift */; };
+		83971911255444D2002FC36C /* PickerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190B255444D2002FC36C /* PickerModels.swift */; };
+		83971912255444D2002FC36C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190C255444D2002FC36C /* PickerViewController.swift */; };
+		83971913255444D2002FC36C /* PickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190D255444D2002FC36C /* PickerInteractor.swift */; };
 		83BB8B602551E3890006C4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB8B5F2551E3890006C4F1 /* AppDelegate.swift */; };
 		83BB8B672551E3890006C4F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83BB8B652551E3890006C4F1 /* Main.storyboard */; };
 		83BB8B692551E38A0006C4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83BB8B682551E38A0006C4F1 /* Assets.xcassets */; };
@@ -59,6 +65,12 @@
 		83220B09255364A100CE5CB6 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		837C3A5525533DC500A268E4 /* ActionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBarView.swift; sourceTree = "<group>"; };
 		837C3A5A2553413100A268E4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		83971908255444D2002FC36C /* PickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPresenter.swift; sourceTree = "<group>"; };
+		83971909255444D2002FC36C /* PickerWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWorker.swift; sourceTree = "<group>"; };
+		8397190A255444D2002FC36C /* PickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerRouter.swift; sourceTree = "<group>"; };
+		8397190B255444D2002FC36C /* PickerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModels.swift; sourceTree = "<group>"; };
+		8397190C255444D2002FC36C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
+		8397190D255444D2002FC36C /* PickerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInteractor.swift; sourceTree = "<group>"; };
 		83BB8B5C2551E3890006C4F1 /* CountryPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BB8B5F2551E3890006C4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83BB8B662551E3890006C4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -174,6 +186,19 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		83971907255444B3002FC36C /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				83971908255444D2002FC36C /* PickerPresenter.swift */,
+				83971909255444D2002FC36C /* PickerWorker.swift */,
+				8397190A255444D2002FC36C /* PickerRouter.swift */,
+				8397190B255444D2002FC36C /* PickerModels.swift */,
+				8397190C255444D2002FC36C /* PickerViewController.swift */,
+				8397190D255444D2002FC36C /* PickerInteractor.swift */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
 		83BB8B532551E3890006C4F1 = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				83BB8B982551E52C0006C4F1 /* Status */,
+				83971907255444B3002FC36C /* Picker */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -526,11 +552,17 @@
 				83BB8BBA2551E7770006C4F1 /* StatusModels.swift in Sources */,
 				837C3A5625533DC500A268E4 /* ActionBarView.swift in Sources */,
 				83BB8BB72551E7770006C4F1 /* StatusPresenter.swift in Sources */,
+				83971910255444D2002FC36C /* PickerRouter.swift in Sources */,
+				8397190F255444D2002FC36C /* PickerWorker.swift in Sources */,
 				83BB8BB82551E7770006C4F1 /* StatusWorker.swift in Sources */,
 				83BB8BB92551E7770006C4F1 /* StatusRouter.swift in Sources */,
+				8397190E255444D2002FC36C /* PickerPresenter.swift in Sources */,
+				83971913255444D2002FC36C /* PickerInteractor.swift in Sources */,
 				83220AFA25535FB800CE5CB6 /* TransparentNavigationController.swift in Sources */,
 				83220B0A255364A100CE5CB6 /* Localizable.swift in Sources */,
 				837C3A5B2553413100A268E4 /* Color.swift in Sources */,
+				83971911255444D2002FC36C /* PickerModels.swift in Sources */,
+				83971912255444D2002FC36C /* PickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
