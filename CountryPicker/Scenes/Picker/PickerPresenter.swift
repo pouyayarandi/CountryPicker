@@ -13,7 +13,7 @@
 import UIKit
 
 protocol PickerPresentationLogic {
-    func presentSomething(response: Picker.Something.Response)
+    //func presentSomething(response: Picker.Something.Response)
 }
 
 class PickerPresenter: PickerPresentationLogic {
@@ -21,8 +21,4 @@ class PickerPresenter: PickerPresentationLogic {
     
     // MARK: Do something
     
-    func presentSomething(response: Picker.Something.Response) {
-        let viewModel = Picker.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
-    }
 }

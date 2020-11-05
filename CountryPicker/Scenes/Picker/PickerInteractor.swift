@@ -12,26 +12,24 @@
 
 import UIKit
 
+protocol PickerSceneDelegate: class {
+    func selectedCountriesDidChanged(countries: [Picker.Something.Response])
+}
+
 protocol PickerBusinessLogic {
-    func doSomething(request: Picker.Something.Request)
+    
 }
 
 protocol PickerDataStore {
-    //var name: String { get set }
+    var delegate: PickerSceneDelegate? { get set }
 }
 
 class PickerInteractor: PickerBusinessLogic, PickerDataStore {
     var presenter: PickerPresentationLogic?
     var worker: PickerWorker?
-    //var name: String = ""
+    
+    weak var delegate: PickerSceneDelegate?
     
     // MARK: Do something
     
-    func doSomething(request: Picker.Something.Request) {
-        worker = PickerWorker()
-        worker?.doSomeWork()
-        
-        let response = Picker.Something.Response()
-        presenter?.presentSomething(response: response)
-    }
 }

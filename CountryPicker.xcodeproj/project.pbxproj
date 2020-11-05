@@ -21,6 +21,7 @@
 		83971911255444D2002FC36C /* PickerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190B255444D2002FC36C /* PickerModels.swift */; };
 		83971912255444D2002FC36C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190C255444D2002FC36C /* PickerViewController.swift */; };
 		83971913255444D2002FC36C /* PickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190D255444D2002FC36C /* PickerInteractor.swift */; };
+		839719332554491B002FC36C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839719322554491B002FC36C /* RoundedButton.swift */; };
 		83BB8B602551E3890006C4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB8B5F2551E3890006C4F1 /* AppDelegate.swift */; };
 		83BB8B672551E3890006C4F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83BB8B652551E3890006C4F1 /* Main.storyboard */; };
 		83BB8B692551E38A0006C4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83BB8B682551E38A0006C4F1 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 		8397190B255444D2002FC36C /* PickerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModels.swift; sourceTree = "<group>"; };
 		8397190C255444D2002FC36C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		8397190D255444D2002FC36C /* PickerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInteractor.swift; sourceTree = "<group>"; };
+		839719322554491B002FC36C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		83BB8B5C2551E3890006C4F1 /* CountryPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BB8B5F2551E3890006C4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83BB8B662551E3890006C4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		837C3A5325533D9B00A268E4 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				83971931255448EF002FC36C /* RoundedButton */,
 				837C3A5425533DA600A268E4 /* ActionBar */,
 			);
 			path = UIKit;
@@ -197,6 +200,14 @@
 				8397190D255444D2002FC36C /* PickerInteractor.swift */,
 			);
 			path = Picker;
+			sourceTree = "<group>";
+		};
+		83971931255448EF002FC36C /* RoundedButton */ = {
+			isa = PBXGroup;
+			children = (
+				839719322554491B002FC36C /* RoundedButton.swift */,
+			);
+			path = RoundedButton;
 			sourceTree = "<group>";
 		};
 		83BB8B532551E3890006C4F1 = {
@@ -548,6 +559,7 @@
 				83BB8BBC2551E7770006C4F1 /* StatusInteractor.swift in Sources */,
 				83BB8BBB2551E7770006C4F1 /* StatusViewController.swift in Sources */,
 				83220AFF2553632E00CE5CB6 /* StatusView.swift in Sources */,
+				839719332554491B002FC36C /* RoundedButton.swift in Sources */,
 				83BB8B602551E3890006C4F1 /* AppDelegate.swift in Sources */,
 				83BB8BBA2551E7770006C4F1 /* StatusModels.swift in Sources */,
 				837C3A5625533DC500A268E4 /* ActionBarView.swift in Sources */,

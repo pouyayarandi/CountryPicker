@@ -13,7 +13,7 @@
 import UIKit
 
 protocol StatusDisplayLogic: class {
-    func displaySomething(viewModel: Status.Something.ViewModel)
+    func displayCountries(countries: [Status.Something.ViewModel])
 }
 
 class StatusViewController: UIViewController, StatusDisplayLogic {
@@ -23,6 +23,10 @@ class StatusViewController: UIViewController, StatusDisplayLogic {
     // swiftlint:disable force_cast
     var statusView: StatusView {
         view as! StatusView
+    }
+    
+    var statusInteractor: StatusInteractor {
+        interactor as! StatusInteractor
     }
 
     // MARK: Object lifecycle
@@ -67,7 +71,8 @@ class StatusViewController: UIViewController, StatusDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+        setupNavigationBar()
+        setupActionButton()
     }
 
     // MARK: Do something
@@ -75,16 +80,17 @@ class StatusViewController: UIViewController, StatusDisplayLogic {
     @Localizable(key: "Status scene title")
     private var sceneTitle
     
-    private func setupView() {
+    private func setupNavigationBar() {
         title = sceneTitle
     }
-
-    func doSomething() {
-        let request = Status.Something.Request()
-        interactor?.doSomething(request: request)
+    
+    private func setupActionButton() {
+        statusView.actionBar.action = { [weak self] in
+            self?.router?.navigateToPickerView()
+        }
     }
 
-    func displaySomething(viewModel: Status.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    func displayCountries(countries: [Status.Something.ViewModel]) {
+        //
     }
 }

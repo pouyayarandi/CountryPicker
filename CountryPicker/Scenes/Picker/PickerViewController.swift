@@ -13,7 +13,7 @@
 import UIKit
 
 protocol PickerDisplayLogic: class {
-    func displaySomething(viewModel: Picker.Something.ViewModel)
+    func updateCountriesTable(with countries: [Picker.Something.ViewModel])
 }
 
 class PickerViewController: UIViewController, PickerDisplayLogic {
@@ -62,19 +62,65 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        
+        setupView()
+        setupNavigationBar()
+        setupCountriesTableView()
+        setupActionBar()
     }
     
     // MARK: Do something
     
-    //@IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet private var countriesTableView: UITableView!
+    @IBOutlet private var actionBar: ActionBarView!
     
-    func doSomething() {
-        let request = Picker.Something.Request()
-        interactor?.doSomething(request: request)
+    private struct Constants {
+        @Localizable(key: "Picker action button title")
+        static var buttonTitle
+        
+        @Localizable(key: "Picker scene title")
+        static var sceneTitle
     }
     
-    func displaySomething(viewModel: Picker.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    private var countries: [Picker.Something.ViewModel] = [] {
+        didSet {
+            guard countriesTableView != nil else { return }
+            countriesTableView.reloadData()
+        }
+    }
+    
+    private func setupView() {
+        view.backgroundColor = Color.defaultBG
+    }
+    
+    private func setupNavigationBar() {
+        title = Constants.sceneTitle
+        navigationItem.setHidesBackButton(true, animated: false)
+    }
+    
+    private func setupCountriesTableView() {
+        countriesTableView.dataSource = self
+    }
+    
+    private func setupActionBar() {
+        actionBar.buttonTitle = Constants.buttonTitle
+    }
+    
+    func updateCountriesTable(with countries: [Picker.Something.ViewModel]) {
+        self.countries = countries
+    }
+}
+
+extension PickerViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        countries.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
     }
 }

@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol StatusRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func navigateToPickerView()
 }
 
 protocol StatusDataPassing {
@@ -25,34 +25,26 @@ class StatusRouter: NSObject, StatusRoutingLogic, StatusDataPassing {
     var dataStore: StatusDataStore?
 
     // MARK: Routing
-
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
-    //{
-    //  if let segue = segue {
-    //    let destinationVC = segue.destination as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //  } else {
-    //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //    let destinationVC = storyboard.instantiateViewController(withIdentifier:
-    //          "SomewhereViewController") as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-    //  }
-    //}
-
+    
+    func routeToPickerViewControllerWithSegue(_ segue: UIStoryboardSegue) {
+        guard let destination = segue.destination as? PickerViewController else { return }
+        var dataStore = destination.router?.dataStore
+        
+        if dataStore != nil {
+            passDelegateToPickerView(destinationDS: &dataStore!)
+        }
+    }
+    
     // MARK: Navigation
-
-    //func navigateToSomewhere(source: StatusViewController, destination: SomewhereViewController)
-    //{
-    //  source.show(destination, sender: nil)
-    //}
+    
+    func navigateToPickerView() {
+        let destination = String(describing: PickerViewController.self)
+        viewController?.performSegue(withIdentifier: destination, sender: nil)
+    }
 
     // MARK: Passing data
-
-    //func passDataToSomewhere(source: StatusDataStore, destination: inout SomewhereDataStore)
-    //{
-    //  destination.name = source.name
-    //}
+    
+    private func passDelegateToPickerView(destinationDS: inout PickerDataStore) {
+        destinationDS.delegate = viewController?.statusInteractor
+    }
 }

@@ -13,25 +13,20 @@
 import UIKit
 
 protocol StatusBusinessLogic {
-    func doSomething(request: Status.Something.Request)
+    
 }
 
 protocol StatusDataStore {
-    //var name: String { get set }
+    
 }
 
 class StatusInteractor: StatusBusinessLogic, StatusDataStore {
     var presenter: StatusPresentationLogic?
     var worker: StatusWorker?
-    //var name: String = ""
+}
 
-    // MARK: Do something
-
-    func doSomething(request: Status.Something.Request) {
-        worker = StatusWorker()
-        worker?.doSomeWork()
-
-        let response = Status.Something.Response()
-        presenter?.presentSomething(response: response)
+extension StatusInteractor: PickerSceneDelegate {
+    func selectedCountriesDidChanged(countries: [Picker.Something.Response]) {
+//        presenter?.presentCountries(countries: countries)
     }
 }

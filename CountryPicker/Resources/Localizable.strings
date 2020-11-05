@@ -11,3 +11,10 @@
 "Status scene title" = "Countries";
 "Selected country list description" = "Your selected countries are here";
 "Select country button title" = "Choose";
+
+/**** Picker ****/
+
+"Picker scene title" = "Select Country";
+"Picker action button title" = "Done";
+"Unselected country action button title" = "Add";
+"Selected country action button title" = "Added";
