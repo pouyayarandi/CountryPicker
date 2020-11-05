@@ -777,7 +777,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B88FA337EBA5D23DC0B3C56 /* Pods-CountryPickerTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CountryPickerTests/Info.plist;
@@ -799,7 +799,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9A29F7F2DEB81BC2FDF56AD /* Pods-CountryPickerTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CountryPickerTests/Info.plist;
