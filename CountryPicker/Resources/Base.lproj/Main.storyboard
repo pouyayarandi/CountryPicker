@@ -96,11 +96,11 @@
                                     <constraint firstAttribute="height" constant="80" id="6qc-K1-W1N"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HKh-if-XpP">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HKh-if-XpP">
                                 <rect key="frame" x="0.0" y="88" width="414" height="694"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PickerTableViewCell" rowHeight="80" id="JZh-wF-tpW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="CountriesTableViewCell" rowHeight="80" id="JZh-wF-tpW" customClass="CountriesTableViewCell" customModule="CountryPicker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JZh-wF-tpW" id="Ppl-dr-td3">
@@ -131,6 +131,10 @@
                                                 <constraint firstItem="vrR-0l-rOq" firstAttribute="centerY" secondItem="Ppl-dr-td3" secondAttribute="centerY" id="wy2-wt-HUR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addButton" destination="GlM-FX-LjN" id="pNT-R0-6yd"/>
+                                            <outlet property="nameLabel" destination="vrR-0l-rOq" id="pQD-h1-RHx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

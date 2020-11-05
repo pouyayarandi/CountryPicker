@@ -20,6 +20,8 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
     var interactor: PickerBusinessLogic?
     var router: (NSObjectProtocol & PickerRoutingLogic & PickerDataPassing)?
     
+    typealias Cell = CountriesTableViewCell
+    
     // MARK: Object lifecycle
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -109,18 +111,25 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
     func updateCountriesTable(with countries: [Picker.Something.ViewModel]) {
         self.countries = countries
     }
+    
+    private func addButtonDidTap(forIndexPath indexPath: IndexPath) {
+        
+    }
 }
 
 extension PickerViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         countries.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        // swiftlint:disable force_cast
+        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: Cell.self)) as! Cell
+        
+        cell.addButtonCallback = { [weak self] in
+            self?.addButtonDidTap(forIndexPath: indexPath)
+        }
+        
+        return cell
     }
 }

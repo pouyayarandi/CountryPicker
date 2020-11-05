@@ -22,6 +22,7 @@
 		83971912255444D2002FC36C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190C255444D2002FC36C /* PickerViewController.swift */; };
 		83971913255444D2002FC36C /* PickerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190D255444D2002FC36C /* PickerInteractor.swift */; };
 		839719332554491B002FC36C /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839719322554491B002FC36C /* RoundedButton.swift */; };
+		8397193C255491F1002FC36C /* CountriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397193B255491F1002FC36C /* CountriesTableViewCell.swift */; };
 		83BB8B602551E3890006C4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB8B5F2551E3890006C4F1 /* AppDelegate.swift */; };
 		83BB8B672551E3890006C4F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83BB8B652551E3890006C4F1 /* Main.storyboard */; };
 		83BB8B692551E38A0006C4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83BB8B682551E38A0006C4F1 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 		8397190C255444D2002FC36C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		8397190D255444D2002FC36C /* PickerInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInteractor.swift; sourceTree = "<group>"; };
 		839719322554491B002FC36C /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		8397193B255491F1002FC36C /* CountriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTableViewCell.swift; sourceTree = "<group>"; };
 		83BB8B5C2551E3890006C4F1 /* CountryPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountryPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83BB8B5F2551E3890006C4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83BB8B662551E3890006C4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -210,6 +212,14 @@
 			path = RoundedButton;
 			sourceTree = "<group>";
 		};
+		8397193A255491C6002FC36C /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				8397193B255491F1002FC36C /* CountriesTableViewCell.swift */,
+			);
+			path = TableCell;
+			sourceTree = "<group>";
+		};
 		83BB8B532551E3890006C4F1 = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +304,7 @@
 		83BB8B982551E52C0006C4F1 /* Status */ = {
 			isa = PBXGroup;
 			children = (
+				8397193A255491C6002FC36C /* TableCell */,
 				83BB8BB12551E7770006C4F1 /* StatusPresenter.swift */,
 				83BB8BB22551E7770006C4F1 /* StatusWorker.swift */,
 				83BB8BB32551E7770006C4F1 /* StatusRouter.swift */,
@@ -570,6 +581,7 @@
 				83BB8BB92551E7770006C4F1 /* StatusRouter.swift in Sources */,
 				8397190E255444D2002FC36C /* PickerPresenter.swift in Sources */,
 				83971913255444D2002FC36C /* PickerInteractor.swift in Sources */,
+				8397193C255491F1002FC36C /* CountriesTableViewCell.swift in Sources */,
 				83220AFA25535FB800CE5CB6 /* TransparentNavigationController.swift in Sources */,
 				83220B0A255364A100CE5CB6 /* Localizable.swift in Sources */,
 				837C3A5B2553413100A268E4 /* Color.swift in Sources */,
