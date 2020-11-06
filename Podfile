@@ -6,14 +6,14 @@ target 'CountryPicker' do
   use_frameworks!
 
   # Pods for CountryPicker
+  pod 'Moya'
+  pod 'SwiftLint'
+  pod 'PromiseKit'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'CountryPickerTests' do
     inherit! :search_paths
-	pod 'Moya'
-	pod 'SwiftLint'
-	pod 'PromiseKit'
-  pod 'RxSwift'
-  pod 'RxCocoa'
   end
 
   target 'CountryPickerUITests' do

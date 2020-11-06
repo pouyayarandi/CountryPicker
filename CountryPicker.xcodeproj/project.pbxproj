@@ -15,6 +15,7 @@
 		83220B0A255364A100CE5CB6 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83220B09255364A100CE5CB6 /* Localizable.swift */; };
 		837C3A5625533DC500A268E4 /* ActionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C3A5525533DC500A268E4 /* ActionBarView.swift */; };
 		837C3A5B2553413100A268E4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C3A5A2553413100A268E4 /* Color.swift */; };
+		8383B372255542BC00382250 /* RxWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383B371255542BC00382250 /* RxWrapper.swift */; };
 		8397190E255444D2002FC36C /* PickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83971908255444D2002FC36C /* PickerPresenter.swift */; };
 		8397190F255444D2002FC36C /* PickerWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83971909255444D2002FC36C /* PickerWorker.swift */; };
 		83971910255444D2002FC36C /* PickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190A255444D2002FC36C /* PickerRouter.swift */; };
@@ -66,6 +67,7 @@
 		83220B09255364A100CE5CB6 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		837C3A5525533DC500A268E4 /* ActionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBarView.swift; sourceTree = "<group>"; };
 		837C3A5A2553413100A268E4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8383B371255542BC00382250 /* RxWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxWrapper.swift; sourceTree = "<group>"; };
 		83971908255444D2002FC36C /* PickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPresenter.swift; sourceTree = "<group>"; };
 		83971909255444D2002FC36C /* PickerWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWorker.swift; sourceTree = "<group>"; };
 		8397190A255444D2002FC36C /* PickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerRouter.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				83220B09255364A100CE5CB6 /* Localizable.swift */,
+				8383B371255542BC00382250 /* RxWrapper.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 		83971907255444B3002FC36C /* Picker */ = {
 			isa = PBXGroup;
 			children = (
+				8397193A255491C6002FC36C /* TableCell */,
 				83971908255444D2002FC36C /* PickerPresenter.swift */,
 				83971909255444D2002FC36C /* PickerWorker.swift */,
 				8397190A255444D2002FC36C /* PickerRouter.swift */,
@@ -302,7 +306,6 @@
 		83BB8B982551E52C0006C4F1 /* Status */ = {
 			isa = PBXGroup;
 			children = (
-				8397193A255491C6002FC36C /* TableCell */,
 				83BB8BB12551E7770006C4F1 /* StatusPresenter.swift */,
 				83BB8BB32551E7770006C4F1 /* StatusRouter.swift */,
 				83BB8BB42551E7770006C4F1 /* StatusModels.swift */,
@@ -335,6 +338,7 @@
 				83BB8B592551E3890006C4F1 /* Frameworks */,
 				83BB8B5A2551E3890006C4F1 /* Resources */,
 				8354BBA32551ECC60032D2FC /* SwiftLint */,
+				3D9852081063B20524551AC8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,7 +357,6 @@
 				83BB8B6E2551E38A0006C4F1 /* Sources */,
 				83BB8B6F2551E38A0006C4F1 /* Frameworks */,
 				83BB8B702551E38A0006C4F1 /* Resources */,
-				6F9464709F66B8A7760D892E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -373,6 +376,7 @@
 				83BB8B792551E38A0006C4F1 /* Sources */,
 				83BB8B7A2551E38A0006C4F1 /* Frameworks */,
 				83BB8B7B2551E38A0006C4F1 /* Resources */,
+				00F93F9BDE07443CDE209D4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -456,6 +460,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00F93F9BDE07443CDE209D4B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CountryPicker-CountryPickerUITests/Pods-CountryPicker-CountryPickerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CountryPicker-CountryPickerUITests/Pods-CountryPicker-CountryPickerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CountryPicker-CountryPickerUITests/Pods-CountryPicker-CountryPickerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3C3743D89203E0AA4BE1A6E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -478,21 +499,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6F9464709F66B8A7760D892E /* [CP] Embed Pods Frameworks */ = {
+		3D9852081063B20524551AC8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CountryPickerTests/Pods-CountryPickerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CountryPicker/Pods-CountryPicker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CountryPickerTests/Pods-CountryPickerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CountryPicker/Pods-CountryPicker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CountryPickerTests/Pods-CountryPickerTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CountryPicker/Pods-CountryPicker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8354BBA32551ECC60032D2FC /* SwiftLint */ = {
@@ -565,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83BB8BBC2551E7770006C4F1 /* StatusInteractor.swift in Sources */,
+				8383B372255542BC00382250 /* RxWrapper.swift in Sources */,
 				83BB8BBB2551E7770006C4F1 /* StatusViewController.swift in Sources */,
 				83220AFF2553632E00CE5CB6 /* StatusView.swift in Sources */,
 				839719332554491B002FC36C /* RoundedButton.swift in Sources */,
@@ -757,6 +779,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77A52116A7632572887A5636 /* Pods-CountryPicker.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -777,6 +800,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7753DCBC2196BC006CEE1607 /* Pods-CountryPicker.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -841,7 +865,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F782922CE6E473999048142 /* Pods-CountryPicker-CountryPickerUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CountryPickerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -861,7 +885,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2FCAFC025090A0E2A253F5E3 /* Pods-CountryPicker-CountryPickerUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CountryPickerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
