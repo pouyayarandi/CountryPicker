@@ -69,6 +69,7 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
         setupNavigationBar()
         setupCountriesTableView()
         setupActionBar()
+        
         interactor?.fetchCountries()
     }
     

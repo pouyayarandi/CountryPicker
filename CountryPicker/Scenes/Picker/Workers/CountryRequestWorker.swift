@@ -23,15 +23,14 @@ class CountryRequestWorker {
             provider.request(.all) { result in
                 switch result {
                 case .success(let response):
-                    do {
-                        seal.fulfill(try JSONDecoder().decode([Response].self, from: response.data))
-                    } catch {
-                        seal.reject(error)
-                    }
+                    seal.fulfill(response.data)
                 case .failure(let error):
                     seal.reject(error)
                 }
             }
+        }
+        .map {
+            try JSONDecoder().decode([Response].self, from: $0)
         }
     }
 }

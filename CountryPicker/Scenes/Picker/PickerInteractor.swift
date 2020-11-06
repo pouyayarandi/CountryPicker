@@ -80,7 +80,7 @@ class PickerInteractor: PickerBusinessLogic, PickerDataStore {
                 self?.countries = countries
             }
             .catch { _ in
-                //
+                NSLog("failed to fetch countries")
             }
     }
     
