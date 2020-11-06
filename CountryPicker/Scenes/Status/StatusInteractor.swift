@@ -24,7 +24,7 @@ class StatusInteractor: StatusBusinessLogic, StatusDataStore {
     var presenter: StatusPresentationLogic?
     var countries: [Status.Country] = []
     
-    private func mapCountry(_ country: Picker.Country.Business) -> Status.Country {
+    private func mapCountry(_ country: Picker.Country.Response) -> Status.Country {
         Status.Country(name: country.name)
     }
     
@@ -34,7 +34,7 @@ class StatusInteractor: StatusBusinessLogic, StatusDataStore {
 }
 
 extension StatusInteractor: PickerSceneDelegate {
-    func selectedCountriesDidChanged(countries: [Picker.Country.Business]) {
+    func selectedCountriesDidChanged(countries: [Picker.Country.Response]) {
         let mappedCountries = countries.map(mapCountry(_:))
         self.countries = mappedCountries
         presenter?.presentCountries(countries: mappedCountries)

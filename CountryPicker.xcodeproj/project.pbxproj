@@ -10,6 +10,8 @@
 		033EFA6AA6E98847B0179431 /* Pods_CountryPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D498817D657CE77BF6B46A3D /* Pods_CountryPicker.framework */; };
 		0B92D2314DC37C400223F8AB /* Pods_CountryPicker_CountryPickerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D641E2B85A4A07375603446 /* Pods_CountryPicker_CountryPickerUITests.framework */; };
 		14291F444BA54D402A94448B /* Pods_CountryPickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1AA340191A4777807A17FC /* Pods_CountryPickerTests.framework */; };
+		8315933E2555567D00B98429 /* CountriesContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8315933D2555567D00B98429 /* CountriesContentProvider.swift */; };
+		8315934625555E8C00B98429 /* CountrySelectorWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8315934525555E8C00B98429 /* CountrySelectorWorker.swift */; };
 		83220AFA25535FB800CE5CB6 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83220AF925535FB800CE5CB6 /* TransparentNavigationController.swift */; };
 		83220AFF2553632E00CE5CB6 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83220AFE2553632E00CE5CB6 /* StatusView.swift */; };
 		83220B0A255364A100CE5CB6 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83220B09255364A100CE5CB6 /* Localizable.swift */; };
@@ -17,7 +19,7 @@
 		837C3A5B2553413100A268E4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837C3A5A2553413100A268E4 /* Color.swift */; };
 		8383B372255542BC00382250 /* RxWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8383B371255542BC00382250 /* RxWrapper.swift */; };
 		8397190E255444D2002FC36C /* PickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83971908255444D2002FC36C /* PickerPresenter.swift */; };
-		8397190F255444D2002FC36C /* PickerWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83971909255444D2002FC36C /* PickerWorker.swift */; };
+		8397190F255444D2002FC36C /* CountryRequestWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83971909255444D2002FC36C /* CountryRequestWorker.swift */; };
 		83971910255444D2002FC36C /* PickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190A255444D2002FC36C /* PickerRouter.swift */; };
 		83971911255444D2002FC36C /* PickerModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190B255444D2002FC36C /* PickerModels.swift */; };
 		83971912255444D2002FC36C /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397190C255444D2002FC36C /* PickerViewController.swift */; };
@@ -62,6 +64,8 @@
 		3D641E2B85A4A07375603446 /* Pods_CountryPicker_CountryPickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountryPicker_CountryPickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7753DCBC2196BC006CEE1607 /* Pods-CountryPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryPicker.release.xcconfig"; path = "Target Support Files/Pods-CountryPicker/Pods-CountryPicker.release.xcconfig"; sourceTree = "<group>"; };
 		77A52116A7632572887A5636 /* Pods-CountryPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryPicker.debug.xcconfig"; path = "Target Support Files/Pods-CountryPicker/Pods-CountryPicker.debug.xcconfig"; sourceTree = "<group>"; };
+		8315933D2555567D00B98429 /* CountriesContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesContentProvider.swift; sourceTree = "<group>"; };
+		8315934525555E8C00B98429 /* CountrySelectorWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectorWorker.swift; sourceTree = "<group>"; };
 		83220AF925535FB800CE5CB6 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
 		83220AFE2553632E00CE5CB6 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		83220B09255364A100CE5CB6 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
@@ -69,7 +73,7 @@
 		837C3A5A2553413100A268E4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		8383B371255542BC00382250 /* RxWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxWrapper.swift; sourceTree = "<group>"; };
 		83971908255444D2002FC36C /* PickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPresenter.swift; sourceTree = "<group>"; };
-		83971909255444D2002FC36C /* PickerWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWorker.swift; sourceTree = "<group>"; };
+		83971909255444D2002FC36C /* CountryRequestWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRequestWorker.swift; sourceTree = "<group>"; };
 		8397190A255444D2002FC36C /* PickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerRouter.swift; sourceTree = "<group>"; };
 		8397190B255444D2002FC36C /* PickerModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModels.swift; sourceTree = "<group>"; };
 		8397190C255444D2002FC36C /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +144,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8315933C2555566100B98429 /* ContentProviders */ = {
+			isa = PBXGroup;
+			children = (
+				8315933D2555567D00B98429 /* CountriesContentProvider.swift */,
+			);
+			path = ContentProviders;
+			sourceTree = "<group>";
+		};
+		8315934A25555EA500B98429 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				83971909255444D2002FC36C /* CountryRequestWorker.swift */,
+				8315934525555E8C00B98429 /* CountrySelectorWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
 		83220B032553645900CE5CB6 /* Wrappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,9 +216,9 @@
 		83971907255444B3002FC36C /* Picker */ = {
 			isa = PBXGroup;
 			children = (
+				8315934A25555EA500B98429 /* Workers */,
 				8397193A255491C6002FC36C /* TableCell */,
 				83971908255444D2002FC36C /* PickerPresenter.swift */,
-				83971909255444D2002FC36C /* PickerWorker.swift */,
 				8397190A255444D2002FC36C /* PickerRouter.swift */,
 				8397190B255444D2002FC36C /* PickerModels.swift */,
 				8397190C255444D2002FC36C /* PickerViewController.swift */,
@@ -247,6 +268,7 @@
 		83BB8B5E2551E3890006C4F1 /* CountryPicker */ = {
 			isa = PBXGroup;
 			children = (
+				8315933C2555566100B98429 /* ContentProviders */,
 				837C3A5325533D9B00A268E4 /* UIKit */,
 				83BB8B972551E5220006C4F1 /* Scenes */,
 				83BB8B932551E4290006C4F1 /* Resources */,
@@ -592,10 +614,12 @@
 				839719332554491B002FC36C /* RoundedButton.swift in Sources */,
 				83BB8B602551E3890006C4F1 /* AppDelegate.swift in Sources */,
 				83BB8BBA2551E7770006C4F1 /* StatusModels.swift in Sources */,
+				8315934625555E8C00B98429 /* CountrySelectorWorker.swift in Sources */,
 				837C3A5625533DC500A268E4 /* ActionBarView.swift in Sources */,
 				83BB8BB72551E7770006C4F1 /* StatusPresenter.swift in Sources */,
+				8315933E2555567D00B98429 /* CountriesContentProvider.swift in Sources */,
 				83971910255444D2002FC36C /* PickerRouter.swift in Sources */,
-				8397190F255444D2002FC36C /* PickerWorker.swift in Sources */,
+				8397190F255444D2002FC36C /* CountryRequestWorker.swift in Sources */,
 				83BB8BB92551E7770006C4F1 /* StatusRouter.swift in Sources */,
 				8397190E255444D2002FC36C /* PickerPresenter.swift in Sources */,
 				83971913255444D2002FC36C /* PickerInteractor.swift in Sources */,

@@ -14,6 +14,11 @@ class CountriesTableViewCell: UITableViewCell {
     @IBOutlet var addButton: UIButton!
     
     var addButtonCallback: (() -> Void)?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        backgroundColor = .clear
+    }
 
     var name: String? {
         didSet {

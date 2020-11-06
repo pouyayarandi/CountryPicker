@@ -11,13 +11,20 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import PromiseKit
 
 protocol PickerSceneDelegate: class {
-    func selectedCountriesDidChanged(countries: [Picker.Country.Business])
+    func selectedCountriesDidChanged(countries: [Picker.Country.Response])
 }
 
 protocol PickerBusinessLogic {
-    
+    // swiftlint:disable identifier_name
+    func updateStatus()
+    func fetchCountries()
+    func changeStatusForCountry(withId id: String, selected: Bool)
+    func searchCountry(query: String)
 }
 
 protocol PickerDataStore {
@@ -26,10 +33,63 @@ protocol PickerDataStore {
 
 class PickerInteractor: PickerBusinessLogic, PickerDataStore {
     var presenter: PickerPresentationLogic?
-    var worker: PickerWorker?
+    var selectorWorker: CountrySelectorWorker
+    
+    private var disposeBag = DisposeBag()
     
     weak var delegate: PickerSceneDelegate?
     
+    @RxBehaviorRelay(value: [])
+    private var countries: [Picker.Country.Response]
+    
+    @RxBehaviorRelay(value: nil)
+    private var query: String?
+    
+    init(selectorWorker: CountrySelectorWorker) {
+        self.selectorWorker = selectorWorker
+        setupDataObservable()
+    }
+    
+    private func setupDataObservable() {
+        Observable
+            .combineLatest($countries, $query)
+            .map({ countries, query -> [Picker.Country.Response] in
+                guard let query = query, !query.isEmpty else { return countries }
+                return countries.filter { $0.name.contains(query) }
+            })
+            .subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                self.presenter?.presentCountries(countries: $0, selectorWorker: self.selectorWorker)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func isCountrySelected(_ country: Picker.Country.Response) -> Bool {
+        selectorWorker.isCountryAdded(id: country.id)
+    }
+    
     // MARK: Do something
     
+    func updateStatus() {
+        delegate?.selectedCountriesDidChanged(countries: countries.filter(isCountrySelected(_:)))
+    }
+    
+    func fetchCountries() {
+        CountryRequestWorker().fetchCountries()
+            .done { [weak self] countries in
+                self?.countries = countries
+            }
+            .catch { _ in
+                //
+            }
+    }
+    
+    // swiftlint:disable identifier_name
+    func changeStatusForCountry(withId id: String, selected: Bool) {
+        selected ? selectorWorker.addCountry(id: id) : selectorWorker.removeCountry(id: id)
+    }
+    
+    func searchCountry(query: String) {
+        self.query = query
+    }
 }

@@ -38,7 +38,7 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
     
     private func setup() {
         let viewController = self
-        let interactor = PickerInteractor()
+        let interactor = PickerInteractor(selectorWorker: CountrySelectorWorker.shared)
         let presenter = PickerPresenter()
         let router = PickerRouter()
         viewController.interactor = interactor
@@ -69,6 +69,7 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
         setupNavigationBar()
         setupCountriesTableView()
         setupActionBar()
+        interactor?.fetchCountries()
     }
     
     // MARK: Do something
@@ -107,6 +108,7 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
     private func setupActionBar() {
         actionBar.buttonTitle = Constants.buttonTitle
         actionBar.action = { [weak self] in
+            self?.interactor?.updateStatus()
             self?.router?.dismiss()
         }
     }
@@ -116,7 +118,12 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
     }
     
     private func addButtonDidTap(forIndexPath indexPath: IndexPath) {
-        
+        countries[indexPath.row].isAdded.toggle()
+        interactor?.changeStatusForCountry(
+            withId: countries[indexPath.row].id,
+            selected: countries[indexPath.row].isAdded
+        )
+        countriesTableView.reloadData()
     }
 }
 

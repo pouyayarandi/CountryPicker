@@ -20,8 +20,8 @@ class StatusViewController: UIViewController, StatusDisplayLogic {
     var interactor: StatusBusinessLogic?
     var router: (NSObjectProtocol & StatusRoutingLogic & StatusDataPassing)?
     
-    // swiftlint:disable force_cast
     var statusView: StatusView {
+        // swiftlint:disable force_cast
         view as! StatusView
     }
     

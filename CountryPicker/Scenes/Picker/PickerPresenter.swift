@@ -13,7 +13,7 @@
 import UIKit
 
 protocol PickerPresentationLogic {
-    func presentCountries(countries: [Picker.Country.Business])
+    func presentCountries(countries: [Picker.Country.Response], selectorWorker: CountrySelectorWorker)
 }
 
 class PickerPresenter: PickerPresentationLogic {
@@ -21,8 +21,11 @@ class PickerPresenter: PickerPresentationLogic {
     
     // MARK: Do something
     
-    func presentCountries(countries: [Picker.Country.Business]) {
-        // todo: call viewController
+    func presentCountries(countries: [Picker.Country.Response], selectorWorker: CountrySelectorWorker) {
+        let countries = countries.map {
+            Picker.Country.ViewModel(id: $0.id, name: $0.name, isAdded: selectorWorker.isCountryAdded(id: $0.id))
+        }
+        viewController?.updateCountriesTable(with: countries)
     }
     
 }

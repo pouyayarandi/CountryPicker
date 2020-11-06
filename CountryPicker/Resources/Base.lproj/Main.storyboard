@@ -121,6 +121,9 @@
                                                     </constraints>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="addButtonDidTap" destination="JZh-wF-tpW" eventType="touchUpInside" id="dB9-Ki-9LW"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>

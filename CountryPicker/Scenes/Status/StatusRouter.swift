@@ -13,6 +13,10 @@
 import UIKit
 
 @objc protocol StatusRoutingLogic {
+    // MARK: Routing
+    func routeToPickerViewControllerWithSegue(_ segue: UIStoryboardSegue)
+    
+    // MARK: Navigation
     func navigateToPickerView()
 }
 

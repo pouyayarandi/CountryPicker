@@ -14,10 +14,10 @@ import UIKit
 
 enum Picker {
     // MARK: Use cases
-    // swiftlint:disable nesting
+    // swiftlint:disable nesting identifier_name
     
     enum Country {
-        struct Business: Codable {
+        struct Response: Codable {
             var id: String
             var name: String
             
@@ -30,16 +30,7 @@ enum Picker {
         struct ViewModel {
             var id: String
             var name: String
-            //var manager
-            
-            var isAdded: Bool {
-                get {
-                    true
-                }
-                set {
-                    
-                }
-            }
+            var isAdded: Bool
         }
     }
 }
