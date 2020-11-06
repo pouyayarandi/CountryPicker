@@ -55,7 +55,7 @@ class PickerInteractor: PickerBusinessLogic, PickerDataStore {
             .combineLatest($countries, $query)
             .map({ countries, query -> [Picker.Country.Response] in
                 guard let query = query, !query.isEmpty else { return countries }
-                return countries.filter { $0.name.contains(query) }
+                return countries.filter { $0.name.lowercased().contains(query.lowercased()) }
             })
             .subscribe(onNext: { [weak self] in
                 guard let self = self else { return }
@@ -75,7 +75,7 @@ class PickerInteractor: PickerBusinessLogic, PickerDataStore {
     }
     
     func fetchCountries() {
-        CountryRequestWorker().fetchCountries()
+        CountryRequestWorker().fetchCountries(.all)
             .done { [weak self] countries in
                 self?.countries = countries
             }
@@ -91,5 +91,9 @@ class PickerInteractor: PickerBusinessLogic, PickerDataStore {
     
     func searchCountry(query: String?) {
         self.query = query
+    }
+    
+    func setCountries(countries: [Picker.Country.Response]) {
+        self.countries = countries
     }
 }

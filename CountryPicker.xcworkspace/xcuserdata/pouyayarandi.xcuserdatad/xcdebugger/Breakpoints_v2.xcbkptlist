@@ -21,7 +21,7 @@
             <Locations>
                <Location
                   uuid = "D305EEF8-CE7D-49BD-9477-B3BE2F5BBFF4 - ef29b5b634171095"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "CountryPicker.PickerInteractor.updateStatus() -&gt; ()"
@@ -36,7 +36,7 @@
                </Location>
                <Location
                   uuid = "D305EEF8-CE7D-49BD-9477-B3BE2F5BBFF4 - 2782932c94220de7"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "implicit closure #2 (CountryPicker.Picker.Country.Response) -&gt; Swift.Bool in implicit closure #1 (CountryPicker.PickerInteractor) -&gt; (CountryPicker.Picker.Country.Response) -&gt; Swift.Bool in CountryPicker.PickerInteractor.updateStatus() -&gt; ()"

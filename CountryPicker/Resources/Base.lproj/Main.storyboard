@@ -12,7 +12,7 @@
         <!--Status View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StatusViewController" customModule="CountryPicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatusViewController" id="BYZ-38-t0r" customClass="StatusViewController" customModule="CountryPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="StatusView" customModule="CountryPicker" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
         <!--Picker View Controller-->
         <scene sceneID="CHw-59-kCQ">
             <objects>
-                <viewController id="hav-CL-knD" customClass="PickerViewController" customModule="CountryPicker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PickerViewController" id="hav-CL-knD" customClass="PickerViewController" customModule="CountryPicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ap-XZ-PVg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -114,7 +114,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GlM-FX-LjN" customClass="RoundedButton" customModule="CountryPicker" customModuleProvider="target">
-                                                    <rect key="frame" x="318" y="25" width="76" height="30"/>
+                                                    <rect key="frame" x="348" y="25" width="46" height="30"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="YwB-xE-Spb"/>
@@ -185,7 +185,7 @@
     </scenes>
     <designables>
         <designable name="GlM-FX-LjN">
-            <size key="intrinsicContentSize" width="76" height="18"/>
+            <size key="intrinsicContentSize" width="46" height="30"/>
         </designable>
     </designables>
     <resources>

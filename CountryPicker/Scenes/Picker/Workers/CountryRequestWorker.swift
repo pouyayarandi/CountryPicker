@@ -18,9 +18,9 @@ class CountryRequestWorker {
     private var provider = MoyaProvider<CountriesContentProvider>()
     typealias Response = Picker.Country.Response
     
-    func fetchCountries() -> Promise<[Response]> {
+    func fetchCountries(_ content: CountriesContentProvider) -> Promise<[Response]> {
         Promise { seal in
-            provider.request(.all) { result in
+            provider.request(content) { result in
                 switch result {
                 case .success(let response):
                     seal.fulfill(response.data)
