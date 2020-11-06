@@ -12,6 +12,8 @@ target 'CountryPicker' do
 	pod 'Moya'
 	pod 'SwiftLint'
 	pod 'PromiseKit'
+  pod 'RxSwift'
+  pod 'RxCocoa'
   end
 
   target 'CountryPickerUITests' do
