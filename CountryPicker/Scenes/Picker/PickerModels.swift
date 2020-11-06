@@ -16,12 +16,30 @@ enum Picker {
     // MARK: Use cases
     // swiftlint:disable nesting
     
-    enum Something {
-        struct Request {
+    enum Country {
+        struct Business: Codable {
+            var id: String
+            var name: String
+            
+            enum CodingKeys: String, CodingKey {
+                case id = "alpha3Code"
+                case name
+            }
         }
-        struct Response {
-        }
+        
         struct ViewModel {
+            var id: String
+            var name: String
+            //var manager
+            
+            var isAdded: Bool {
+                get {
+                    true
+                }
+                set {
+                    
+                }
+            }
         }
     }
 }

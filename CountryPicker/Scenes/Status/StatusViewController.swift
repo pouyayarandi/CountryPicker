@@ -13,7 +13,7 @@
 import UIKit
 
 protocol StatusDisplayLogic: class {
-    func displayCountries(countries: [Status.Something.ViewModel])
+    func displayCountries(countries: [Status.Country])
 }
 
 class StatusViewController: UIViewController, StatusDisplayLogic {
@@ -71,17 +71,24 @@ class StatusViewController: UIViewController, StatusDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupNavigationBar()
         setupActionButton()
+        interactor?.updateCountriesText()
     }
 
     // MARK: Do something
     
-    @Localizable(key: "Status scene title")
-    private var sceneTitle
+    private struct Constants {
+        @Localizable(key: "Status scene title")
+        static var sceneTitle
+        
+        @Localizable(key: "Empty countries description")
+        static var noCountrySelected
+    }
     
     private func setupNavigationBar() {
-        title = sceneTitle
+        title = Constants.sceneTitle
     }
     
     private func setupActionButton() {
@@ -90,7 +97,9 @@ class StatusViewController: UIViewController, StatusDisplayLogic {
         }
     }
 
-    func displayCountries(countries: [Status.Something.ViewModel]) {
-        //
+    func displayCountries(countries: [Status.Country]) {
+        statusView.countriesTextView.text = countries.isEmpty
+            ? Constants.noCountrySelected
+            : countries.map({ $0.name }).joined(separator: ", ")
     }
 }

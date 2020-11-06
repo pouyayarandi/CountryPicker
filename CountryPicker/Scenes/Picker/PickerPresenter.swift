@@ -13,12 +13,16 @@
 import UIKit
 
 protocol PickerPresentationLogic {
-    //func presentSomething(response: Picker.Something.Response)
+    func presentCountries(countries: [Picker.Country.Business])
 }
 
 class PickerPresenter: PickerPresentationLogic {
     weak var viewController: PickerDisplayLogic?
     
     // MARK: Do something
+    
+    func presentCountries(countries: [Picker.Country.Business]) {
+        // todo: call viewController
+    }
     
 }

@@ -27,12 +27,13 @@ class StatusRouter: NSObject, StatusRoutingLogic, StatusDataPassing {
     // MARK: Routing
     
     func routeToPickerViewControllerWithSegue(_ segue: UIStoryboardSegue) {
-        guard let destination = segue.destination as? PickerViewController else { return }
-        var dataStore = destination.router?.dataStore
-        
-        if dataStore != nil {
-            passDelegateToPickerView(destinationDS: &dataStore!)
+        guard let destination = segue.destination as? PickerViewController,
+              var dataStore = destination.router?.dataStore
+        else {
+            return
         }
+        
+        passDelegateToPickerView(dataStore: &dataStore)
     }
     
     // MARK: Navigation
@@ -44,7 +45,7 @@ class StatusRouter: NSObject, StatusRoutingLogic, StatusDataPassing {
 
     // MARK: Passing data
     
-    private func passDelegateToPickerView(destinationDS: inout PickerDataStore) {
-        destinationDS.delegate = viewController?.statusInteractor
+    private func passDelegateToPickerView(dataStore: inout PickerDataStore) {
+        dataStore.delegate = viewController?.statusInteractor
     }
 }

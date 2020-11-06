@@ -13,15 +13,7 @@
 import UIKit
 
 enum Status {
-    // MARK: Use cases
-    // swiftlint:disable nesting
-    
-    enum Something {
-        struct Request {
-        }
-        struct Response {
-        }
-        struct ViewModel {
-        }
+    struct Country {
+        var name: String
     }
 }

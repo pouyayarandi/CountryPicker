@@ -30,7 +30,6 @@
 		83BB8B772551E38A0006C4F1 /* CountryPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB8B762551E38A0006C4F1 /* CountryPickerTests.swift */; };
 		83BB8B822551E38A0006C4F1 /* CountryPickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB8B812551E38A0006C4F1 /* CountryPickerUITests.swift */; };
 		83BB8BB72551E7770006C4F1 /* StatusPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB8BB12551E7770006C4F1 /* StatusPresenter.swift */; };
-		83BB8BB82551E7770006C4F1 /* StatusWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB8BB22551E7770006C4F1 /* StatusWorker.swift */; };
 		83BB8BB92551E7770006C4F1 /* StatusRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB8BB32551E7770006C4F1 /* StatusRouter.swift */; };
 		83BB8BBA2551E7770006C4F1 /* StatusModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB8BB42551E7770006C4F1 /* StatusModels.swift */; };
 		83BB8BBB2551E7770006C4F1 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83BB8BB52551E7770006C4F1 /* StatusViewController.swift */; };
@@ -88,7 +87,6 @@
 		83BB8B812551E38A0006C4F1 /* CountryPickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerUITests.swift; sourceTree = "<group>"; };
 		83BB8B832551E38A0006C4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83BB8BB12551E7770006C4F1 /* StatusPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPresenter.swift; sourceTree = "<group>"; };
-		83BB8BB22551E7770006C4F1 /* StatusWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusWorker.swift; sourceTree = "<group>"; };
 		83BB8BB32551E7770006C4F1 /* StatusRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusRouter.swift; sourceTree = "<group>"; };
 		83BB8BB42551E7770006C4F1 /* StatusModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModels.swift; sourceTree = "<group>"; };
 		83BB8BB52551E7770006C4F1 /* StatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
@@ -306,7 +304,6 @@
 			children = (
 				8397193A255491C6002FC36C /* TableCell */,
 				83BB8BB12551E7770006C4F1 /* StatusPresenter.swift */,
-				83BB8BB22551E7770006C4F1 /* StatusWorker.swift */,
 				83BB8BB32551E7770006C4F1 /* StatusRouter.swift */,
 				83BB8BB42551E7770006C4F1 /* StatusModels.swift */,
 				83BB8BB52551E7770006C4F1 /* StatusViewController.swift */,
@@ -577,7 +574,6 @@
 				83BB8BB72551E7770006C4F1 /* StatusPresenter.swift in Sources */,
 				83971910255444D2002FC36C /* PickerRouter.swift in Sources */,
 				8397190F255444D2002FC36C /* PickerWorker.swift in Sources */,
-				83BB8BB82551E7770006C4F1 /* StatusWorker.swift in Sources */,
 				83BB8BB92551E7770006C4F1 /* StatusRouter.swift in Sources */,
 				8397190E255444D2002FC36C /* PickerPresenter.swift in Sources */,
 				83971913255444D2002FC36C /* PickerInteractor.swift in Sources */,

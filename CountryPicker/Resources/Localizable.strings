@@ -11,6 +11,7 @@
 "Status scene title" = "Countries";
 "Selected country list description" = "Your selected countries are here";
 "Select country button title" = "Choose";
+"Empty countries description" = "You have selected no country";
 
 /**** Picker ****/
 

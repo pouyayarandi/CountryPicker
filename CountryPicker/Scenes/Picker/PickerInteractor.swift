@@ -13,7 +13,7 @@
 import UIKit
 
 protocol PickerSceneDelegate: class {
-    func selectedCountriesDidChanged(countries: [Picker.Something.Response])
+    func selectedCountriesDidChanged(countries: [Picker.Country.Business])
 }
 
 protocol PickerBusinessLogic {

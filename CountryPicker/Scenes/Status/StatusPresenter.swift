@@ -13,7 +13,7 @@
 import UIKit
 
 protocol StatusPresentationLogic {
-    func presentCountries(countries: [Status.Something.Response])
+    func presentCountries(countries: [Status.Country])
 }
 
 class StatusPresenter: StatusPresentationLogic {
@@ -21,7 +21,7 @@ class StatusPresenter: StatusPresentationLogic {
 
     // MARK: Do something
 
-    func presentCountries(countries: [Status.Something.Response]) {
-        
+    func presentCountries(countries: [Status.Country]) {
+        viewController?.displayCountries(countries: countries)
     }
 }

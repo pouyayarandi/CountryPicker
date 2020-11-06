@@ -13,7 +13,7 @@
 import UIKit
 
 @objc protocol PickerRoutingLogic {
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func dismiss()
 }
 
 protocol PickerDataPassing {
@@ -24,35 +24,10 @@ class PickerRouter: NSObject, PickerRoutingLogic, PickerDataPassing {
     weak var viewController: PickerViewController?
     var dataStore: PickerDataStore?
     
-    // MARK: Routing
-    
-    //func routeToSomewhere(segue: UIStoryboardSegue?)
-    //{
-    //  if let segue = segue {
-    //    let destinationVC = segue.destination as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //  } else {
-    //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //    let destinationVC = storyboard.instantiateViewController(withIdentifier:
-    //          "SomewhereViewController") as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-    //  }
-    //}
-    
     // MARK: Navigation
     
-    //func navigateToSomewhere(source: PickerViewController, destination: SomewhereViewController)
-    //{
-    //  source.show(destination, sender: nil)
-    //}
+    func dismiss() {
+        viewController?.navigationController?.popViewController(animated: true)
+    }
     
-    // MARK: Passing data
-    
-    //func passDataToSomewhere(source: PickerDataStore, destination: inout SomewhereDataStore)
-    //{
-    //  destination.name = source.name
-    //}
 }

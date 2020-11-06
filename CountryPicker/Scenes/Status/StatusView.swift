@@ -42,6 +42,7 @@ class StatusView: UIView {
     }
     
     private func setupCountriesTextView() {
+        // todo: make constant for these values
         countriesTextView.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         
         countriesTextViewContainer.layer.cornerRadius = 8

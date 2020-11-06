@@ -13,7 +13,7 @@
 import UIKit
 
 protocol StatusBusinessLogic {
-    
+    func updateCountriesText()
 }
 
 protocol StatusDataStore {
@@ -22,11 +22,21 @@ protocol StatusDataStore {
 
 class StatusInteractor: StatusBusinessLogic, StatusDataStore {
     var presenter: StatusPresentationLogic?
-    var worker: StatusWorker?
+    var countries: [Status.Country] = []
+    
+    private func mapCountry(_ country: Picker.Country.Business) -> Status.Country {
+        Status.Country(name: country.name)
+    }
+    
+    func updateCountriesText() {
+        presenter?.presentCountries(countries: countries)
+    }
 }
 
 extension StatusInteractor: PickerSceneDelegate {
-    func selectedCountriesDidChanged(countries: [Picker.Something.Response]) {
-//        presenter?.presentCountries(countries: countries)
+    func selectedCountriesDidChanged(countries: [Picker.Country.Business]) {
+        let mappedCountries = countries.map(mapCountry(_:))
+        self.countries = mappedCountries
+        presenter?.presentCountries(countries: mappedCountries)
     }
 }

@@ -13,7 +13,7 @@
 import UIKit
 
 protocol PickerDisplayLogic: class {
-    func updateCountriesTable(with countries: [Picker.Something.ViewModel])
+    func updateCountriesTable(with countries: [Picker.Country.ViewModel])
 }
 
 class PickerViewController: UIViewController, PickerDisplayLogic {
@@ -84,7 +84,7 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
         static var sceneTitle
     }
     
-    private var countries: [Picker.Something.ViewModel] = [] {
+    private var countries: [Picker.Country.ViewModel] = [] {
         didSet {
             guard countriesTableView != nil else { return }
             countriesTableView.reloadData()
@@ -106,9 +106,12 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
     
     private func setupActionBar() {
         actionBar.buttonTitle = Constants.buttonTitle
+        actionBar.action = { [weak self] in
+            self?.router?.dismiss()
+        }
     }
     
-    func updateCountriesTable(with countries: [Picker.Something.ViewModel]) {
+    func updateCountriesTable(with countries: [Picker.Country.ViewModel]) {
         self.countries = countries
     }
     
@@ -125,7 +128,10 @@ extension PickerViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // swiftlint:disable force_cast
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: Cell.self)) as! Cell
+        let country = countries[indexPath.row]
         
+        cell.name = country.name
+        cell.isAdded = country.isAdded
         cell.addButtonCallback = { [weak self] in
             self?.addButtonDidTap(forIndexPath: indexPath)
         }
