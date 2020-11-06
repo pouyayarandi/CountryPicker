@@ -13,6 +13,8 @@
 		8305B4C32555AC0E00C6C0DE /* PickerInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305B4BF2555AC0E00C6C0DE /* PickerInteractorTests.swift */; };
 		8305B4C42555AC0E00C6C0DE /* CountryRequestWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305B4C02555AC0E00C6C0DE /* CountryRequestWorkerTests.swift */; };
 		8305B4C52555AC0E00C6C0DE /* PickerPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305B4C12555AC0E00C6C0DE /* PickerPresenterTests.swift */; };
+		8305B4E22555C57A00C6C0DE /* KeyboardAwareConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305B4E12555C57A00C6C0DE /* KeyboardAwareConstraint.swift */; };
+		8305B4E62555C81D00C6C0DE /* UIViewController+KeyboardAwareConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305B4E52555C81D00C6C0DE /* UIViewController+KeyboardAwareConstraint.swift */; };
 		8315933E2555567D00B98429 /* CountriesContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8315933D2555567D00B98429 /* CountriesContentProvider.swift */; };
 		8315934625555E8C00B98429 /* CountrySelectorWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8315934525555E8C00B98429 /* CountrySelectorWorker.swift */; };
 		83220AFA25535FB800CE5CB6 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83220AF925535FB800CE5CB6 /* TransparentNavigationController.swift */; };
@@ -62,6 +64,8 @@
 		8305B4BF2555AC0E00C6C0DE /* PickerInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerInteractorTests.swift; sourceTree = "<group>"; };
 		8305B4C02555AC0E00C6C0DE /* CountryRequestWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryRequestWorkerTests.swift; sourceTree = "<group>"; };
 		8305B4C12555AC0E00C6C0DE /* PickerPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerPresenterTests.swift; sourceTree = "<group>"; };
+		8305B4E12555C57A00C6C0DE /* KeyboardAwareConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAwareConstraint.swift; sourceTree = "<group>"; };
+		8305B4E52555C81D00C6C0DE /* UIViewController+KeyboardAwareConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardAwareConstraint.swift"; sourceTree = "<group>"; };
 		8315933D2555567D00B98429 /* CountriesContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesContentProvider.swift; sourceTree = "<group>"; };
 		8315934525555E8C00B98429 /* CountrySelectorWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountrySelectorWorker.swift; sourceTree = "<group>"; };
 		83220AF925535FB800CE5CB6 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,15 @@
 			path = PickerSceneTests;
 			sourceTree = "<group>";
 		};
+		8305B4E92555C82900C6C0DE /* KeyboardAwareConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				8305B4E12555C57A00C6C0DE /* KeyboardAwareConstraint.swift */,
+				8305B4E52555C81D00C6C0DE /* UIViewController+KeyboardAwareConstraint.swift */,
+			);
+			path = KeyboardAwareConstraint;
+			sourceTree = "<group>";
+		};
 		8315933C2555566100B98429 /* ContentProviders */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +226,7 @@
 				83220B032553645900CE5CB6 /* Wrappers */,
 				83220B052553647500CE5CB6 /* Colors */,
 				83220B042553646600CE5CB6 /* TransparentNavigation */,
+				8305B4E92555C82900C6C0DE /* KeyboardAwareConstraint */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -542,8 +556,10 @@
 				83BB8BB72551E7770006C4F1 /* StatusPresenter.swift in Sources */,
 				8315933E2555567D00B98429 /* CountriesContentProvider.swift in Sources */,
 				83971910255444D2002FC36C /* PickerRouter.swift in Sources */,
+				8305B4E22555C57A00C6C0DE /* KeyboardAwareConstraint.swift in Sources */,
 				8397190F255444D2002FC36C /* CountryRequestWorker.swift in Sources */,
 				83BB8BB92551E7770006C4F1 /* StatusRouter.swift in Sources */,
+				8305B4E62555C81D00C6C0DE /* UIViewController+KeyboardAwareConstraint.swift in Sources */,
 				8397190E255444D2002FC36C /* PickerPresenter.swift in Sources */,
 				83971913255444D2002FC36C /* PickerInteractor.swift in Sources */,
 				8397193C255491F1002FC36C /* CountriesTableViewCell.swift in Sources */,

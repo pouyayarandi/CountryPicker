@@ -71,6 +71,7 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
         setupActionBar()
         
         interactor?.fetchCountries()
+        subscribeKeyboardNotification()
     }
     
     // MARK: Do something
