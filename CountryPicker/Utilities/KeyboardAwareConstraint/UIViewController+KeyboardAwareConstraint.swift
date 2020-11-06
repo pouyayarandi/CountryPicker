@@ -40,7 +40,8 @@ extension UIViewController {
     
     @objc private func keyboardWillShow(_ notification: Notification) {
         guard let constraint = keyboardAwareConstraint else { return }
-        guard let height = keyboardHeight(from: notification, includesSafeArea: constraint.includeSafeArea) else { return }
+        guard let height = keyboardHeight(from: notification, includesSafeArea: constraint.includeSafeArea)
+            else { return }
         
         constraint.applyKeyboardHeight(height)
         UIView.animate(withDuration: 0.3) { [weak self] in
