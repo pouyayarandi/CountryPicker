@@ -139,7 +139,7 @@ public func when<It: IteratorProtocol>(fulfilled promiseIterator: It, concurrent
     }
 
     var generator = promiseIterator
-    var root = Promise<[It.Element.T]>.pending()
+    let root = Promise<[It.Element.T]>.pending()
     var pendingPromises = 0
     var promises: [It.Element] = []
 
@@ -154,14 +154,12 @@ public func when<It: IteratorProtocol>(fulfilled promiseIterator: It, concurrent
         }
         guard shouldDequeue else { return }
 
-        var index: Int!
         var promise: It.Element!
 
         barrier.sync(flags: .barrier) {
             guard let next = generator.next() else { return }
 
             promise = next
-            index = promises.count
 
             pendingPromises += 1
             promises.append(next)
