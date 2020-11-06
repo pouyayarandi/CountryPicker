@@ -24,7 +24,7 @@ protocol PickerBusinessLogic {
     func updateStatus()
     func fetchCountries()
     func changeStatusForCountry(withId id: String, selected: Bool)
-    func searchCountry(query: String)
+    func searchCountry(query: String?)
 }
 
 protocol PickerDataStore {
@@ -89,7 +89,7 @@ class PickerInteractor: PickerBusinessLogic, PickerDataStore {
         selected ? selectorWorker.addCountry(id: id) : selectorWorker.removeCountry(id: id)
     }
     
-    func searchCountry(query: String) {
+    func searchCountry(query: String?) {
         self.query = query
     }
 }

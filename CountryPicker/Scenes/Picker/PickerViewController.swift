@@ -83,6 +83,9 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
         
         @Localizable(key: "Picker scene title")
         static var sceneTitle
+        
+        @Localizable(key: "Search bar placeholder")
+        static var searchPlaceholder
     }
     
     private var countries: [Picker.Country.ViewModel] = [] {
@@ -99,6 +102,14 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
     private func setupNavigationBar() {
         title = Constants.sceneTitle
         navigationItem.setHidesBackButton(true, animated: false)
+        
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = Constants.searchPlaceholder
+        definesPresentationContext = true
+        
+        navigationItem.searchController = searchController
     }
     
     private func setupCountriesTableView() {
@@ -108,7 +119,6 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
     private func setupActionBar() {
         actionBar.buttonTitle = Constants.buttonTitle
         actionBar.action = { [weak self] in
-            self?.interactor?.updateStatus()
             self?.router?.dismiss()
         }
     }
@@ -124,6 +134,7 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
             selected: countries[indexPath.row].isAdded
         )
         countriesTableView.reloadData()
+        interactor?.updateStatus()
     }
 }
 
@@ -144,5 +155,11 @@ extension PickerViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+}
+
+extension PickerViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        interactor?.searchCountry(query: searchController.searchBar.text)
     }
 }
