@@ -74,14 +74,11 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
         subscribeKeyboardNotification()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationItem.searchController = searchController
-    }
-    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        navigationItem.searchController?.dismiss(animated: animated, completion: nil)
+        if presentingViewController == nil {
+            searchController.dismiss(animated: animated, completion: nil)
+        }
     }
     
     // MARK: Do something
@@ -122,7 +119,10 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
     private func setupNavigationBar() {
         title = Constants.sceneTitle
         navigationItem.setHidesBackButton(true, animated: false)
+        
         definesPresentationContext = true
+        
+        navigationItem.searchController = searchController
     }
     
     private func setupCountriesTableView() {
