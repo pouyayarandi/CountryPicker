@@ -74,7 +74,25 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
         subscribeKeyboardNotification()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.searchController = searchController
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        navigationItem.searchController?.dismiss(animated: animated, completion: nil)
+    }
+    
     // MARK: Do something
+    
+    lazy private var searchController: UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = Constants.searchPlaceholder
+        return searchController
+    }()
     
     @IBOutlet private var countriesTableView: UITableView!
     @IBOutlet private var actionBar: ActionBarView!
@@ -104,14 +122,7 @@ class PickerViewController: UIViewController, PickerDisplayLogic {
     private func setupNavigationBar() {
         title = Constants.sceneTitle
         navigationItem.setHidesBackButton(true, animated: false)
-        
-        let searchController = UISearchController(searchResultsController: nil)
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = Constants.searchPlaceholder
         definesPresentationContext = true
-        
-        navigationItem.searchController = searchController
     }
     
     private func setupCountriesTableView() {
